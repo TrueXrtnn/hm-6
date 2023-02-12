@@ -1,3 +1,4 @@
+
 public class Main {
         public static void main (String[] args) {
             task1();
@@ -39,40 +40,44 @@ public class Main {
         int population = 12_000_000;
         int differencePopulation= 17-8;
         for (int i=1; i<=10; i++){
-            int FactorForDifference=0;
-            FactorForDifference=population/1000;
-            population = population+ (FactorForDifference*differencePopulation);
+            int factorForDifference;
+            factorForDifference=population/1000;
+            population = population+ (factorForDifference*differencePopulation);
             System.out.println("Год "+i+", численность населения составляет"+population);
         }}
     public static void task4() {
         System.out.println("Задача 4");
         int salary = 15000;
-        int total = 0;
+        double total =0;
+
         for (int i = 1; total<12_000_000; i++){
-            total= total+(total*7/100);
+            total= total+(total*0.07);
             total=total+salary;
-            System.out.println( i+ " месяц, накопления составляют "+ total+ " рублей.");
+            String result = String.format("%.2f",total);
+            System.out.println( i+ " месяц, накопления составляют "+ result+ " рублей.");
         }
     }
     public static void task5() {
         System.out.println("Задача 5");
         int salary = 15000;
-        int total = 0;
+        double total =0;
         for (int i = 1; total<12_000_000; i++){
-            total= total+(total*7/100);
+            total= total+(total*0.07);
             total=total+salary;
-            if (i%6==0) System.out.println( i+ " месяц, накопления составляют "+ total+ " рублей.");
+            String result = String.format("%.2f",total);
+            if (i%6==0)  System.out.println( i+ " месяц, накопления составляют "+ result+ " рублей.");
         }
     }
     public static void task6() {
         System.out.println("Задача 6");
         int salary = 15000;
-        int total = 0;
+        double total =0;
         for (int i = 1; i<=108; i++){
-            total= total+(total*7/100);
+            total= total+(total*0.07);
             total=total+salary;
+            String result = String.format("%.2f",total);
             if (i%6==0)
-                System.out.println( i+ " месяц, накопления составляют "+ total+ " рублей.");
+                System.out.println( i+ " месяц, накопления составляют "+ result+ " рублей.");
         }
     }
     public static void task7() {
